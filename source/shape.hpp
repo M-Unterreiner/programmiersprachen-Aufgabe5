@@ -9,12 +9,12 @@
 class Shape
 {
   private:
-  // ??
   std::string name_;
   Color color_;
 
   public:
   Shape();
+  Shape(std::string name, Color color);
   virtual double area()   const=0;
   virtual double volume() const=0;
 
