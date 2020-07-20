@@ -28,3 +28,9 @@
     Shape::print(os);
     return os << "Area: " << area() << "Volume: " << volume();
   }
+
+// Nicht meine Idee!
+bool Sphere::intersect (Ray ray, float& distance) const
+{
+  return glm::intersectRaySphere (ray.origin, ray.direction, center_, pow(radius_, 2), distance);
+}

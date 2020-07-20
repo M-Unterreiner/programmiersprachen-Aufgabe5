@@ -2,10 +2,12 @@
 #ifndef SPHERE_HPP
 #define SPEHRE_HPP
 #include <glm/vec3.hpp>
+#include <glm/gtx/intersect.hpp>
 #include <math.h>
 
 #include "shape.hpp"
 #include "color.hpp"
+#include "ray.hpp"
 
 
 class Sphere: public Shape
@@ -19,7 +21,8 @@ class Sphere: public Shape
   double volume() const override; 
   std::ostream& print(std::ostream& os) const override;
 
-  
+  bool intersect (Ray ray, float& distance) const;
+
   private:
   double radius_;
   glm::vec3 center_;
