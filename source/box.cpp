@@ -38,3 +38,10 @@
 
     return x*y*z;
   }
+
+
+  std::ostream& Box::print(std::ostream &os) const override
+  {
+    Shape::print(os);
+    return os << "Area: " area() << "Volume: " << volume() << "Minumum: " + minimum_.x;
+  }
