@@ -9,6 +9,7 @@
 #include "box.hpp"
 #include "sphere.hpp"
 #include "shape.hpp"
+#include "color.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -77,4 +78,19 @@ TEST_CASE("intersect_ray_sphere", "[intersect]")
       distance);
 
   REQUIRE(distance == Approx(4.0f));
+}
+
+
+TEST_CASE("Constructor, Destructor, 5.8", "[Was muss hier eigentlich rein?]")
+{
+  Color red{255, 0, 0};
+  glm::vec3 position{0.0f, 0.0f, 0.0f};
+  Sphere* s1 = new Sphere{position, 1.2f, red, " sphere0 "};
+  Shape*  s2 = new Sphere{position, 1.2f, red, "sphere 1"};
+
+  s1->print(std ::cout);
+  s2->print(std ::cout);
+
+  delete s1;
+  delete s2;
 }
