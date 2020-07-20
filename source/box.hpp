@@ -11,6 +11,7 @@ class Box: public Shape
   Box();
   Box(glm::vec3 const& minimum, glm::vec3 const& maximum);
   Box(glm::vec3 const& minimum, glm::vec3 const& maximum, std::string name, Color color);
+  ~Box();
   double area() const override;
   double volume() const override;
 

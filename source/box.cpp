@@ -21,6 +21,11 @@
   maximum_(maximum)
   {};
 
+  Box::~Box()
+  {
+    std::cout << "Box destructed";
+  }
+
   double Box::area() const
   {
     double x {maximum_.x - minimum_.x};
