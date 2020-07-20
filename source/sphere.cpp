@@ -13,6 +13,11 @@
   radius_(radius) 
   {};
 
+  Sphere::~Sphere()
+  {
+    std::cout << "Sphere destruktored";
+  };
+
   double Sphere::area() const 
   {
     return 4 * M_PI * pow(radius_, 2);
