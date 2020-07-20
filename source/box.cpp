@@ -20,3 +20,12 @@
   minimum_(minimum),
   maximum_(maximum)
   {};
+
+  double Box::area() const
+  {
+    double x {maximum_.x - minimum_.x};
+    double y {maximum_.y - minimum_.y};
+    double z {maximum_.z - minimum_.z};
+
+    return 2*x*y + 2*x*z + 2*y*z;
+  }
