@@ -14,7 +14,7 @@ class Box: public Shape
   double area() const override;
   double volume() const override;
 
-  std::ostream &print(std::ostream &os) const override;
+  std::ostream& print(std::ostream& os) const override;
 
   private:
   glm::vec3 minimum_;

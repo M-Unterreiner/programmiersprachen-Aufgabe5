@@ -40,8 +40,8 @@
   }
 
 
-  std::ostream& Box::print(std::ostream &os) const override
+  std::ostream& Box::print(std::ostream& os) const
   {
     Shape::print(os);
-    return os << "Area: " area() << "Volume: " << volume() << "Minumum: " + minimum_.x;
+    return os << "Area: " << area() << "Volume: " << volume() << "Minumum: " << minimum_.x;
   }
