@@ -11,10 +11,15 @@ color_{Color{30.0f, 30.0f, 30.0f}}
 }
 
 
-Shape::Shape(std::string name, Color color):
+Shape::Shape(std::string const& name, Color const& color):
 name_{"Nameless shape"},
 color_{color}
 {
+}
+
+Shape::~Shape()
+{
+  std::cout << "Shape destructed";
 }
 
 std::ostream &Shape::print(std::ostream &os) const
