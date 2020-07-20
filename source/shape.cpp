@@ -19,11 +19,13 @@ color_{color}
 
 std::ostream &Shape::print(std::ostream &os) const
 {
-  return os << "Shape: " << "\n" << "Name: " << name_ << ", \n"; // << "Color: " << color_;
+  // Wieso funktioniert die Ausgabe mit color_ nicht?
+  // no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+  return os << "Shape name: " << name_ << " , " << "Color: " << color_;
 }
 
 // Freie Funktion! Kein direkter Zugriff auf Membervariablen
 std::ostream& operator << (std::ostream& os, Shape const& s)
 {
-  return s.print(os); 
+  return s.print(os);
 }
