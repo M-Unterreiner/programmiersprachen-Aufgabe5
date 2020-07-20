@@ -2,6 +2,7 @@
 #ifndef SPHERE_HPP
 #define SPEHRE_HPP
 #include <glm/vec3.hpp>
+#include <math.h>
 
 #include "shape.hpp"
 #include "color.hpp"

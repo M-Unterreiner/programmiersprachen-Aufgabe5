@@ -1,16 +1,22 @@
 #include "sphere.hpp"
 
 
-  // Sphere(glm::vec3 const& center, double const& radius);
-
   Sphere::Sphere(glm::vec3 const& center, double const& radius):
   Shape(),
   center_(center),
-  radius_(radius) {};
-
-  // Sphere::Sphere(glm::vec3 const& center, double const& radius, Color const& color):
+  radius_(radius) 
+  {};
 
   Sphere::Sphere(glm::vec3 const& center, double const& radius, Color const& color, std::string name):
   Shape(name, color),
   center_(center),
-  radius_(radius) {};
+  radius_(radius) 
+  {};
+
+  double Sphere::area() const 
+  {
+    return 4 * M_PI * pow(radius_, 2);
+  }
+
+
+
