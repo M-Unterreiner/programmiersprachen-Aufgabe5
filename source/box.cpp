@@ -29,3 +29,12 @@
 
     return 2*x*y + 2*x*z + 2*y*z;
   }
+
+  double Box::volume() const
+  {
+    double x = maximum_.x - minimum_.x;
+    double y = maximum_.y - minimum_.y;
+    double z = maximum_.z - minimum_.z;
+
+    return x*y*z;
+  }
