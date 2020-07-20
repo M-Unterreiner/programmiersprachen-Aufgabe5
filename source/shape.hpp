@@ -17,6 +17,7 @@ class Shape
   Shape(std::string name, Color color);
   virtual double area()   const=0;
   virtual double volume() const=0;
+
   virtual std::ostream& print(std::ostream& os) const;
 
 };

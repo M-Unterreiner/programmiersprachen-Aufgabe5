@@ -23,3 +23,8 @@
     return (4.0/3.0) * M_PI * pow(radius_, 3);
   }
 
+  std::ostream& Sphere::print(std::ostream& os) const
+  {
+    Shape::print(os);
+    return os << "Area: " << area() << "Volume: " << volume();
+  }

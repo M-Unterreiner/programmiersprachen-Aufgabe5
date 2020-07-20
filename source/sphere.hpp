@@ -17,10 +17,13 @@ class Sphere: public Shape
 
   double area() const override;
   double volume() const override; 
+  std::ostream& print(std::ostream& os) const override;
 
+  
   private:
   double radius_;
   glm::vec3 center_;
 };
+
 
 #endif
