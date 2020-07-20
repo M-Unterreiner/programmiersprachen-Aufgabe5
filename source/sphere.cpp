@@ -18,5 +18,8 @@
     return 4 * M_PI * pow(radius_, 2);
   }
 
-
+  double Sphere::volume() const
+  {
+    return (4.0/3.0) * M_PI * pow(radius_, 3);
+  }
 
